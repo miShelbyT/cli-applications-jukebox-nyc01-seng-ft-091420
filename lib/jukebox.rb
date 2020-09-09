@@ -29,15 +29,26 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   song_input = gets.strip
-    songs.each_with_index do |song, i|
-  if song_input == song || song_input.to_i == i.next
-    puts "Playing #{song}"
+
+  if song_input.to_i >= 1 && song_input.to_i <= songs.length
+      puts "Playing #{songs[song_input.to_i-1]}"
+  elsif songs.include?(song_input)
+      found_song = songs.find do |song|
+        song_input == song
+      end
+      puts "Playing #{found_song}"
   else
-    puts "Invalid input, please try again"
-    end
+      puts "Invalid input, please try again"
   end
 end
+
 
 def exit_jukebox
   puts "Goodbye"
 end
+
+
+# songs.each_with_index do |song, i|
+  # if song_input == song || song_input.to_i == i+1
+  # if song_input == song || song_input.to_i == i+1
+    # binding.pry
