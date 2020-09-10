@@ -59,6 +59,8 @@ def run(songs)
   play(songs)
   when "list"
   list(songs)
+when "exit"
+  exit_jukebox
   else
   puts "Oops please try again"
     end
