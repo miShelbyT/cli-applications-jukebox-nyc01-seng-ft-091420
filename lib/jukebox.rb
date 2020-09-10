@@ -52,22 +52,17 @@ def run(songs)
   while user_input != "exit"
   puts "Please enter a command:"
   user_input = gets.strip
-  exit_app = exit_jukebox
-  help_me = help
-  play_songs = play(songs)
-  list_songs = list(songs)
   case user_input
-  when "exit"
-  exit_app
   when "help"
-  help_me
+  help
   when "play"
-  play_songs
+  play(songs)
   when "list"
-  list_songs
+  list(songs)
+  when "exit"
+  exit_jukebox
   else
-  puts "Please enter a valid command:"
+  puts "Oops please try again"
     end
   end
-  exit_app
 end
