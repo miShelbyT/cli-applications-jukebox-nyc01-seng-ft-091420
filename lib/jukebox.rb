@@ -65,5 +65,5 @@ def run(songs)
   puts "Oops please try again"
     end
   end
-  exit_app
+  exit_jukebox
 end
